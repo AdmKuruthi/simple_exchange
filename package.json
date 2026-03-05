@@ -1,0 +1,28 @@
+{
+  "name": "simple_exchange",
+  "version": "1.0.0",
+  "description": "A simple app that consumes exchangerate's api and let's anyone make quick checks on the exchange rate with the UI",
+  "keywords": [
+    "exchange",
+    "api",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/AdmKuruthi/simple_exchange#readme",
+  "bugs": {
+    "url": "https://github.com/AdmKuruthi/simple_exchange/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdmKuruthi/simple_exchange.git"
+  },
+  "license": "MIT",
+  "author": "AdmKuruthi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
