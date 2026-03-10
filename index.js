@@ -1,6 +1,5 @@
 //Essential imports
 import express from 'express';
-import bodyParser from 'body-parser';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,13 +11,14 @@ const app = express();
 //Get port from cmd or default to 3000
 const port = process.argv[2] || 3000;
 
+app.set('view engine', 'ejs');
 
 //Set views directory
 app.set('views', __dirname + '/views');
 
 //First middleware to parse JSON bodies
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //Define public directory for statics
 app.use(express.static(__dirname + '/public'));
@@ -29,7 +29,13 @@ app.use(express.static(__dirname + '/public'));
  * Area to define routes
  * 
 */
+app.get('/', (req, res) => {
+    
+    
+    
+    res.render('index', {title: 'Simple Exchange'});
 
+});
 
 
 
